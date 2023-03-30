@@ -1,0 +1,61 @@
+1 - Criar uma aplicação em NextJS
+yarn create next-app nomeDaAplicação
+
+Pasta pages
+- Cada arquivo dentro dessa pasta é uma rota
+- Essa pasta não pode ser renomeada
+- Só pode estar na raiz do projeto ou no src
+- O arquivo index automaticamente será a rota "/"
+- File system routing
+- pages/my-folder/index.tsx -> http://localhost:3000/my-folder
+- pages/my-folder/about.tsx -> http://localhost:3000/my-folder/about
+- import Link from "next/link" -> Para navegar entre as páginas
+<Link href="/my-folder/about">
+    <a>My third page</a> // Podemos usar qualquer elemento que aceita o onclick
+</Link>
+
+<Link
+      href={{
+        pathname: "/about",
+        query: { id: "test" }, // Passar parâmetros entre rotas
+      }} 
+    >
+      <a>About page</a>
+</Link>
+
+Scoped CSS 
+- CSS restrito a um componente
+- Podemos usar por padrão no next
+- .module.css 
+- não podemos estilizar os elementos diretamente ex: h1, li, ul
+import styles from '../styles/home.module.css'
+<h1 className={styles.title}>
+    hello world
+</h1>
+
+.module.scss
+Utilizar o sass
+- yarn add sass
+- trocar a extensão dos arquivos de estilização para .scss
+.scss -> obrigatório chaves
+.sass -> não é obrigado chaves
+
+
+Podemos colocar o title do Head em qualquer lugar do Next 
+assim como tags de SEO e dessa forma podemos direcionar o SEO para uma página específica
+
+<Head>
+    <tite>Início | Página </title>
+</Head>
+
+_app.tsx 
+- componente que fica em volta de todas as páginas
+- Renderiza a página no momento do roteamento utilizando o Component seguido das propriedades da página com pageProps
+- Para repetir algo em todas as páginas colocar ele no app 
+- Reexecutado toda vez que o usuário trocar de tela
+
+_document.tsx
+- Carregado apenas uma única vez
+- Representa o nosso index.html
+- <Main /> renderiza todos os componentes principais
+- <NextScript /> Coloca os arquivos js que a aplicação precisa para funcionar

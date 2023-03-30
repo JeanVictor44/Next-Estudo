@@ -1,0 +1,24 @@
+Aplicações React 
+(SPA) single page application -> recarrega apenas as Partes que se alteram e não toda a aplicação
+
+Browser(cliente) -> código React bundle(Monta a página fazendo uma requisição para o backend) -> backend retorna os dados <- Backend(servidor) 
+
+A grande desvantagem é que se o Javascript for desabilitado alguns browsers 
+não conseguirão ler o conteúdo e ranquear a página pois as páginas em react 
+são montadas pelo Javascript do browser, Ejetando o html construído na div root
+
+Aplicações  Next
+(SSR) Server Side Rendering -> Servidor fornece o html (Código react)
+
+Browser -> NextJS(Servidor node JS) -> backend
+
+O Browser acessa o Next quando o usuário entrar na rota. 
+Nossa aplicação Next é um servidor em node JS que pode acessar 
+outro servidor para buscar dados e montar nossas telas.
+
+Podemos fazer tudo isso com o Javascript desabilitado, pois o Javascript não está mais sendo usado 
+diretamente no browser para construir a página, mas sim no backend em NextJS para servir a página ao Browser
+
+As vantagens disso está principalmente no SEO da página construída em Next. 
+Ela será melhor ranqueada porque o browser terá acesso a página mesmo que o Javascript 
+esteja desabilitado, tendo inclusive acesso a página montada com as informações do banco de dados
