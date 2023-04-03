@@ -58,4 +58,7 @@ _document.tsx
 - Carregado apenas uma única vez
 - Representa o nosso index.html
 - <Main /> renderiza todos os componentes principais
-- <NextScript /> Coloca os arquivos js que a aplicação precisa para funcionar
+- <NextScript /> Coloca os arquivos js que a aplicação precisa para funcionar]
+
+Imagens ficam sempre na pasta public
+e importamos usando /images/nomeDaimagem. 
