@@ -62,3 +62,16 @@ _document.tsx
 
 Imagens ficam sempre na pasta public
 e importamos usando /images/nomeDaimagem. 
+
+-> se eu fizer uma chamada a api da forma tradicional com useEffect e useState para guardar os dados
+   essa chamada só acontecerá dentro do browser, sendo assim quando o browser ler o conteúdo do nosso site
+   não encontrará as informações buscadas na API, pois isso é feito depois da leitura e ranqueamento
+
+   Layout shift -> se a chamada for feita com o formato antigo será perceptível a busca de dados, pois o usuário verá
+                   os dados sendo buscados após o layout ser carregado no browser
+
+para resolver isso nós buscamos os dados do lado do servidor para após isso entregar o layout ao browser com esses dados
+o grande problema é que se demorar 3 seg para buscar esses dados, irá demorar 3 seg para entregarmos toda a página para o browser
+
+Eu só consigo buscar algo via http de forma server side se for dentro de uma página do next,
+para ter acesso aos dados buscados no meu componente eu preciso repassar os dados pegos na página para o componente

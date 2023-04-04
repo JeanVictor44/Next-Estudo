@@ -22,3 +22,5 @@ diretamente no browser para construir a página, mas sim no backend em NextJS pa
 As vantagens disso está principalmente no SEO da página construída em Next. 
 Ela será melhor ranqueada porque o browser terá acesso a página mesmo que o Javascript 
 esteja desabilitado, tendo inclusive acesso a página montada com as informações do banco de dados
+
+
