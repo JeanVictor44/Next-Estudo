@@ -24,3 +24,21 @@ Ela será melhor ranqueada porque o browser terá acesso a página mesmo que o J
 esteja desabilitado, tendo inclusive acesso a página montada com as informações do banco de dados
 
 
+SSG(STATIC SITE GENERATION)
+
+Quando uma pessoa acessa minha aplicação e faz todo o processo para o next(servidor) 
+devolver o html com os dados buscados em uma api
+
+O next salva o meu site HTML de uma forma estática no próprio BACKEND do NEXT com todos os dados que foram buscados
+e os próximos usuários que acessarem essa rota terão o HTML que o primeiro usuário buscou
+
+a vantagem disso é que não haverá novas requisições todas as vezes que um usuário acessar o mesmo site  
+
+
+Não existe informação disponível no Frontend que esteja totalmente segura, pois no Frontend ela é pública
+ou seja qualquer operação que exija segurança executamos no backend.
+
+O next é um servidor portanto podemos executar algumas operações que exigem segurança dentro da nossa aplicação em Next
+
+pasta api -> api routes -> todo arquivo aqui dentro se transforma em uma rota do nosso backend
+
